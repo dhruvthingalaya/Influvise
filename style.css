@@ -59,11 +59,12 @@ small {
 }
 
 :root {
-  --text: #1a1a1a;
-  --background: #f8f8f8;
-  --primary: #000000;
-  --secondary: #666666;
-  --accent: #bfbfbf;
+  --text: #000000;
+  --background: #ffffff;
+  --primary: #1a1a1a;
+  --secondary: #737373;
+  --accent: #0074e4;
+
   --box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
 }
 
@@ -122,52 +123,41 @@ a {
   font-weight: 500;
   text-align: center;
   border: none;
-  border-radius: 8px;
-  background-color: var(--accent);
+  border-radius: 50px;
+  background-color: var(--secondary);
 }
 
 .primary-btn {
-  background-color: var(--primary);
+  background-color: var(--accent);
   color: var(--background);
-  border: 2px solid var(--primary);
+  border: 2px solid var(--accent);
   transition: all 0.3s ease-in-out;
 }
 
 .primary-btn:hover {
-  /* background-color: var(--accent); */
-  /* border: 2px solid var(--accent); */
   transform: translateY(-3px);
   transition: all 0.3s ease-in-out;
   box-shadow: var(--box-shadow);
 }
 
-.primary-btn:active {
-  background-color: var(--secondary);
-  border: 2px solid var(--secondary);
-  transition: all 0.2s ease-in-out;
-}
-
 .secondary-btn {
+  display: inline-flex;
+  align-items: center;
   background-color: transparent;
-  color: var(--primary);
-  border: 2px solid var(--primary);
+  color: var(--accent);
+  border: 2px solid var(--accent);
   transition: all 0.3s ease-in-out;
 }
 
 .secondary-btn:hover {
-  background-color: var(--primary);
+  background-color: var(--accent);
   color: var(--background);
-  border: 2px solid var(--primary);
+  border: 2px solid var(--accent);
   transform: translateY(-3px);
   transition: all 0.3s ease-in-out;
   box-shadow: var(--box-shadow);
 }
 
-.secondary-btn:active {
-  background-color: var(--secondary);
-  border: 2px solid var(--secondary);
-  transition: all 0.2s ease-in-out;
-}
 
 /* COMPONENTS */
 
