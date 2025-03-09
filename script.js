@@ -24,19 +24,28 @@ document.addEventListener("DOMContentLoaded", () => {
     const faqs = document.querySelectorAll(".faq-container");
 
     faqs.forEach((faq) => {
-        const question = faq.querySelector(".faq-question");
         const answer = faq.querySelector(".faq-answer");
         const icon = faq.querySelector(".faq-icon");
 
-        question.addEventListener("click", () => {
-            // Toggle answer visibility
-            answer.classList.toggle("faq-open");
+        // Clicking on the FAQ container opens it
+        faq.addEventListener("click", (event) => {
+            // Prevent the icon click from triggering this event
+            if (event.target === icon) return;
 
-            // Toggle icon rotation
-            icon.classList.toggle("rotated");
+            answer.classList.add("faq-open");
+            icon.classList.add("rotated");
+        });
+
+        // Clicking on the icon closes it
+        icon.addEventListener("click", (event) => {
+            event.stopPropagation(); // Prevents the container click event from firing
+            answer.classList.remove("faq-open");
+            icon.classList.remove("rotated");
         });
     });
 });
+
+
 
 
 
