@@ -5,13 +5,11 @@ document.getElementById('Clients').addEventListener
         document.body.classList.add('no-scroll');
     })
 
-// document.getElementById('closeClients').addEventListener
-//     ('click', function () {
-//         document.getElementById('clientsPopup').closest();
-//         document.body.classList.remove('no-scroll');
-//     })
+document.getElementById('closeClients').addEventListener
+    ('click', function (event) {
+        event.stopPropagation();
+        document.getElementById('clientsPopup').close();
+        document.body.classList.remove('no-scroll');
+    })
 
-function closeClients() {
-    document.getElementById('clientsPopup').close();
-    document.body.classList.remove('no-scroll');
-}
+

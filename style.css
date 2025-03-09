@@ -473,7 +473,6 @@ footer small {
 }
 
 .popup {
-  display: none;
   max-width: 100vw;
   min-width: 100vw;
   max-height: 100vh;
@@ -497,8 +496,6 @@ footer small {
 }
 
 .popup[open] {
-  display: flex;
-  flex-direction: column;
   margin: 0px;
   padding: 50px;
 }
