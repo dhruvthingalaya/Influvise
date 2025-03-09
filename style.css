@@ -519,7 +519,7 @@ footer small {
   scroll-snap-align: center;
 }
 
-#closeClients {
+.closeModal {
   cursor: pointer;
   position: absolute;
   /* z-index: 2; */
@@ -535,7 +535,7 @@ footer small {
   outline: none;
 }
 
-#closeClients i {
+.closeModal i {
   position: absolute;
   z-index: 0;
   top: 0;
@@ -548,8 +548,86 @@ footer small {
   transition: all 0.3s ease-in-out;
 }
 
-#closeClients:hover > i {
+.closeModal:hover > i {
   color: var(--primary);
   opacity: 0.8;
   transition: all 0.3s ease-in-out;
+}
+
+/* FAQ's */
+#FAQs {
+  width: 90%;
+  max-width: 1200px;
+  height: fit-content;
+  margin: 50px auto;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: fit-content;
+  width: 100%;
+  background-color: var(--background);
+  padding: 20px 30px;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.faq-container:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--box-shadow);
+  transition: all 0.3s ease-in-out;
+}
+
+.faq-question {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.faq-question h5 {
+  cursor: pointer;
+}
+
+.faq-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 25px;
+  text-align: center;
+  color: var(--primary);
+  transition: all 0.5s ease-in-out;
+}
+
+.faq-container:hover > .faq-question .faq-icon {
+  color: var(--accent);
+  transform: rotate(90deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.faq-answer {
+  display: none;
+  height: 0px;
+  opacity: 0;
+  gap: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.faq-open {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  height: fit-content;
+  transition: all 0.3s ease-in-out;
+}
+
+.rotated {
+  color: var(--secondary);
+  transform: rotate(-45deg);
+  tra
 }

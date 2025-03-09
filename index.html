@@ -97,21 +97,18 @@
         />
       </div>
 
+      <!-- ABOUT -->
       <div class="section" id="About">
-        <!--  -->
-        <div class="about-container" id="Clients">
-          <!--  -->
+        <!-- Clients -->
+        <div class="about-container" id="clients">
           <h3>Who we work with</h3>
-          <img src="./assets/who-clients.jpg" alt="" />
+          <img src="./assets/who-clients.jpg" alt="Who we work with" />
           <i class="fa-solid fa-circle-plus"></i>
-
           <dialog class="popup" id="clientsPopup">
             <div class="popup-section">
-              <!--  -->
-              <button id="closeClients" onclick="closeClients()">
+              <button class="closeModal">
                 <i class="fa-solid fa-circle-xmark"></i>
               </button>
-              <!--  -->
               <h3>Hello World</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
@@ -142,24 +139,67 @@
           </dialog>
         </div>
 
-        <div class="about-container" id="Service">
+        <!-- Service -->
+        <div class="about-container" id="service">
           <h3>What we provide</h3>
           <img src="./assets/what-services.jpg" alt="" />
           <i class="fa-solid fa-circle-plus"></i>
+          <dialog class="popup" id="servicePopup">
+            <div class="popup-section">
+              <button class="closeModal">
+                <i class="fa-solid fa-circle-xmark"></i>
+              </button>
+              <h2>Hello world</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
+                corporis dignissimos autem alias labore, odio architecto tempore
+                maxime culpa totam repudiandae commodi repellat natus enim
+                laudantium, nulla officia facilis exercitationem.
+              </p>
+            </div>
+          </dialog>
         </div>
-        <div class="about-container" id="Invite">
+
+        <!-- Invite -->
+        <div class="about-container" id="invite">
           <h3>Why Invite only</h3>
           <img src="./assets/why-invites.jpg" alt="" />
           <i class="fa-solid fa-circle-plus"></i>
+          <dialog class="popup" id="invitePopup">
+            <div class="popup-section">
+              <button class="closeModal">
+                <i class="fa-solid fa-circle-xmark"></i>
+              </button>
+              <h2>Hi Dawg</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Laborum neque quod magni voluptates earum et repudiandae ullam
+                beatae a quasi, quo nostrum enim dolor ut. Quidem voluptatibus
+                repudiandae doloribus? Quibusdam.
+              </p>
+            </div>
+          </dialog>
         </div>
-        <!-- <div class="about-container" id="test">
-          <h3>About Heading</h3>
-          <i class="fa-solid fa-circle-plus"></i>
+      </div>
+
+      <!-- FAQs -->
+      <div class="section" id="FAQs">
+        <!-- <h3>FAQ's</h3> -->
+        <div class="faq-container" id="faq1">
+          <div class="faq-question" id="faq1Question">
+            <h5 class="faq-question">What question do you have</h5>
+            <i class="fa-solid fa-circle-plus faq-icon"></i>
+          </div>
+          <div class="faq-answer" id="faq1Answer">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+              odio repellendus dolor quia quos esse officiis magnam ad eligendi
+              iste possimus odit reprehenderit culpa harum, quibusdam libero
+              provident distinctio? Dicta.
+            </p>
+            <button class="primary-btn btn">Call to action</button>
+          </div>
         </div>
-        <div class="about-container" id="test">
-          <h3>About Heading</h3>
-          <i class="fa-solid fa-circle-plus"></i>
-        </div> -->
       </div>
     </main>
 
