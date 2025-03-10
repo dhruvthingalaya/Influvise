@@ -1,0 +1,106 @@
+/* Tablet (max-width: 1024px) */
+@media only screen and (max-width: 1024px) {
+  /* Tablet-specific styles */
+  body {
+    font-size: 15px; /* Slightly smaller */
+  }
+
+  h1 {
+    font-size: 3.5rem; /* ~56px */
+    line-height: 1.2; /* ~67px */
+  }
+
+  h2 {
+    font-size: 2.8rem; /* ~45px */
+    line-height: 1.3; /* ~59px */
+  }
+
+  h3 {
+    font-size: 2rem; /* ~32px */
+    line-height: 1.4; /* ~45px */
+  }
+
+  h4 {
+    font-size: 1.5rem; /* ~24px */
+    line-height: 1.5; /* ~36px */
+  }
+
+  h5 {
+    font-size: 1.2rem; /* ~19px */
+    line-height: 1.6; /* ~30px */
+  }
+
+  .popup-section img {
+    margin: 0;
+  }
+}
+
+/* Phone (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+  /* Phone-specific styles */
+  body {
+    font-size: 14px; /* Smaller font size */
+  }
+
+  h1 {
+    font-size: 3rem; /* ~48px */
+    line-height: 1.2; /* ~58px */
+  }
+
+  h2 {
+    font-size: 2.4rem; /* ~38px */
+    line-height: 1.3; /* ~50px */
+  }
+
+  h3 {
+    font-size: 1.8rem; /* ~29px */
+    line-height: 1.4; /* ~41px */
+  }
+
+  h4 {
+    font-size: 1.4rem; /* ~22px */
+    line-height: 1.5; /* ~33px */
+  }
+
+  h5 {
+    font-size: 1rem; /* ~16px */
+    line-height: 1.6; /* ~25px */
+  }
+
+  .popup {
+    margin: 0;
+    width: 95%;
+    padding: 10px;
+  }
+
+  .popup-section {
+    padding: 40px;
+  }
+
+  .faq-icon {
+    font-size: 25px;
+  }
+
+  #about {
+    max-width: 100vw;
+    width: 100%;
+  }
+
+  .about-container {
+    min-width: 85vw;
+    max-width: 85vw;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
+
+/* Very Small Devices (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+  /* Very small device-specific styles */
+}

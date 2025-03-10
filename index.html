@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Influvise</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaquires.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -16,12 +17,37 @@
       <h4><a href="./index.html" class="logo">Influvise.</a></h4>
       <ul class="nav-links">
         <li>
-          <a href="./index.html#About" class="nav-item accent-link">About</a>
+          <a href="#About" class="nav-item accent-link">About</a>
         </li>
-        <li><a href="#" class="nav-item accent-link">Blog</a></li>
-        <li><a href="#FAQs" class="nav-item accent-link">FAQ's</a></li>
-        <li><a href="#" class="nav-item accent-link">Contact</a></li>
+        <li>
+          <a href="#Blog" class="nav-item accent-link">Blog</a>
+        </li>
+        <li>
+          <a href="#FAQs" class="nav-item accent-link">FAQ's</a>
+        </li>
+        <li>
+          <a href="#Contact" class="nav-item accent-link">Contact</a>
+        </li>
       </ul>
+      <div class="mobile-nav">
+        <i class="fa-solid fa-bars mobile-menu"></i>
+        <div class="mobile-nav-container">
+          <ul class="mobile-nav-links">
+            <li>
+              <a href="#About" class="mobile-nav-item">About</a>
+            </li>
+            <li>
+              <a href="#Blog" class="mobile-nav-item">Blog</a>
+            </li>
+            <li>
+              <a href="#FAQs" class="mobile-nav-item">FAQ's</a>
+            </li>
+            <li>
+              <a href="#Contact" class="mobile-nav-item">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
 
     <!-- MAIN BODY -->
@@ -29,10 +55,8 @@
       <div id="Hero" class="section">
         <h2>We Build Premium Merch Brands for Creators</h2>
         <p>
-          From design to fulfillment, we handle everything while you focus on
-          creating. No inventory, no logistics—just high-quality, fully managed
-          merch tailored to your brand. Invite-only: Apply now to see if you
-          qualify or learn more about our process.
+          From design to fulfillment, we manage it all while you create. No
+          inventory, no logistics — just premium merch tailored to your brand.
         </p>
         <div>
           <a href="#"><button class="primary-btn btn">Apply Now</button></a>
@@ -87,8 +111,10 @@
       <div class="section" id="About">
         <!-- Clients -->
         <div class="about-container" id="clients">
-          <h3>Who we work with</h3>
+          <h3 class="about-container_heading">Who We Work With</h3>
+          <small class="about-container_heading">Select Creators</small>
           <img
+            class="about-container__img"
             src="./assets/who-clients.jpg"
             alt="Who we work with"
             loading="eager"
@@ -99,40 +125,40 @@
               <button class="closeModal" autofocus>
                 <i class="fa-solid fa-circle-xmark"></i>
               </button>
-              <h3>Hello World</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-                fuga quibusdam porro esse minus sequi autem dolorem accusamus
-                qui corporis nisi iure consequatur, sunt labore quasi aspernatur
-                voluptatem animi et.
+              <!-- Content -->
+              <h5 class="quote">
+                We don't work with every creator - only those who are truly
+                ready to build a brand.
+              </h5>
+              <p class="section__text">
+                We handpick creators who align with our vision of high-end,
+                authentic branding. Our focus is on quality over quantity,
+                ensuring every creator stands out.
               </p>
-            </div>
-            <div class="popup-section">
-              <h3>Hello World</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Perspiciatis adipisci doloremque debitis provident id similique
-                dolorum consequatur, cupiditate animi consectetur! Culpa libero
-                et officiis repudiandae eaque ipsa eius inventore minus!
+              <img src="./assets/about-pic.png" alt="" />
+              <p class="section__text">
+                We partner with a select few creators who have 50K or more
+                followers, an engaged community, and a clear brand identity in
+                high-converting niches. Our invite-only model ensures quality
+                over quantity, and less than 1% of applicants qualify. Apply now
+                to see if you qualify.
               </p>
-            </div>
-            <div class="popup-section">
-              <h3>Hello World</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-                quisquam perspiciatis molestiae quis repudiandae quo, ratione in
-                doloribus rem cupiditate, aspernatur consectetur voluptatibus
-                quaerat ex dolore veritatis aliquam quia! Vitae.
-              </p>
-              <button class="primary-btn btn">Button</button>
+              <a href="#"
+                ><button class="primary-btn btn">
+                  Apply Here - Limited Access
+                </button></a
+              >
+              <!-- <small>(Only 5 Spots Left)</small> -->
             </div>
           </dialog>
         </div>
 
         <!-- Service -->
         <div class="about-container" id="service">
-          <h3>What we provide</h3>
+          <h3 class="about-container_heading">What We Provide</h3>
+          <small class="about-container_heading">Elite Service</small>
           <img
+            class="about-container__img"
             src="./assets/what-services.jpg"
             alt="Our Service"
             loading="eager"
@@ -143,21 +169,105 @@
               <button class="closeModal" autofocus>
                 <i class="fa-solid fa-circle-xmark"></i>
               </button>
-              <h2>Hello world</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                corporis dignissimos autem alias labore, odio architecto tempore
-                maxime culpa totam repudiandae commodi repellat natus enim
-                laudantium, nulla officia facilis exercitationem.
+              <!-- Content -->
+              <h5 class="quote">
+                From design to fulfillment, branding to logistics, we take care
+                of everything.
+              </h5>
+              <small class="section__text">
+                No inventory risks. No customer service headaches. Just
+                high-quality, personalized products that reflect your brand.
+              </small>
+              <img src="./assets/about-pic.png" alt="" />
+              <p class="section__text">
+                At Influvise, we offer a
+                <strong>fully customized merchandise service</strong>
+                for a select group of creators. We don't use templates -
+                everything from your store design to your products is crafted to
+                reflect your unique brand. You'll be involved in every step,
+                guiding the vision while we handle the creation, logistics, and
+                fulfillment. With just a few calls and minimal effort, you'll
+                have your own premium merch line, designed to monetize your
+                audience at its highest potential. We provide
+                <strong>weekly reports</strong> and
+                <strong>monthly strategy calls</strong> to track progress and
+                make adjustments.
               </p>
+              <a href="#"
+                ><button class="primary-btn btn">
+                  Get Started - Limited Access
+                </button></a
+              >
+            </div>
+          </dialog>
+        </div>
+
+        <!-- How -->
+        <div class="about-container" id="how">
+          <h3 class="about-container_heading">How It All Works</h3>
+          <small class="about-container_heading">Seamless Process</small>
+          <img
+            class="about-container__img"
+            src="./assets/why-invites.jpg"
+            alt="Why we are Invite only"
+            loading="eager"
+          />
+          <i class="fa-solid fa-circle-plus"></i>
+          <dialog class="popup" id="howPopup">
+            <div class="popup-section">
+              <button class="closeModal" autofocus>
+                <i class="fa-solid fa-circle-xmark"></i>
+              </button>
+              <!-- Contnet -->
+              <div class="section__text">
+                <h4>
+                  We break down the entire journey into clear steps, showing how
+                  effortless it is to work with us.
+                </h4>
+                <ul id="howList">
+                  <li>
+                    <strong>Strategy & Branding: </strong><br />We kick off with
+                    a one-on-one strategy session to understand your vision,
+                    goals, and branding needs for your merch.
+                  </li>
+                  <li>
+                    <strong>Brand & Store Customization: </strong><br />Our team
+                    creates a fully tailored store design and merch offerings
+                    that align perfectly with your unique brand identity.
+                  </li>
+                  <li>
+                    <strong>Product Development:</strong><br />We handle
+                    everything from sourcing to creation, ensuring your products
+                    meet the highest quality standards and reflect your style.
+                  </li>
+                  <li>
+                    <strong>Launch & Promotion:</strong><br />Once your store is
+                    live, we assist with launch strategies and marketing to
+                    ensure maximum visibility and engagement.
+                  </li>
+                  <li>
+                    <strong>Ongoing Management:</strong><br />We continuously
+                    monitor and optimize your store's performance, sending you
+                    weekly reports and holding monthly check-ins to refine
+                    strategies.
+                  </li>
+                </ul>
+              </div>
+              <img src="./assets/about-pic.png" alt="" />
+              <h5 class="quote">This isn't just merch. This is your brand.</h5>
+              <a href="#"
+                ><button class="primary-btn btn">Start Your Journey</button></a
+              >
             </div>
           </dialog>
         </div>
 
         <!-- Invite -->
         <div class="about-container" id="invite">
-          <h3>Why Invite only</h3>
+          <h3 class="about-container_heading">Why Invite Only</h3>
+          <small class="about-container_heading">Exclusive Access</small>
           <img
+            class="about-container__img"
             src="./assets/why-invites.jpg"
             alt="Why we are Invite only"
             loading="eager"
@@ -168,13 +278,25 @@
               <button class="closeModal" autofocus>
                 <i class="fa-solid fa-circle-xmark"></i>
               </button>
-              <h2>Hi Dawg</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Laborum neque quod magni voluptates earum et repudiandae ullam
-                beatae a quasi, quo nostrum enim dolor ut. Quidem voluptatibus
-                repudiandae doloribus? Quibusdam.
+              <!-- Contnet -->
+              <h5 class="quote">
+                Exclusivity means quality. If everyone could do it, it wouldn't
+                be premium.
+              </h5>
+              <p class="section__text">
+                Our invite-only model ensures that we work exclusively with
+                creators who are serious about building their brand. By
+                selecting only a few, we can offer a
+                <strong>premium, highly personalized experience</strong> that
+                guarantees each creator receives the
+                <strong>attention and resources they need</strong> to succeed.
+                This approach allows us to provide
+                <strong>top-tier service</strong> without compromise.
               </p>
+              <img src="./assets/about-pic.png" alt="" />
+              <a href="#"
+                ><button class="primary-btn btn">Request an Invite</button></a
+              >
             </div>
           </dialog>
         </div>
@@ -185,43 +307,69 @@
         <!-- <h3>FAQ's</h3> -->
         <div class="faq-container" id="faq1">
           <div class="faq-question" id="faq1Question">
-            <h5 class="faq-question">What question do you have</h5>
+            <h5 class="faq-question">How do I apply to work with Influvise?</h5>
             <i class="fa-solid fa-circle-plus faq-icon"></i>
           </div>
           <div class="faq-answer" id="faq1Answer">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-              odio repellendus dolor quia quos esse officiis magnam ad eligendi
-              iste possimus odit reprehenderit culpa harum, quibusdam libero
-              provident distinctio? Dicta.
+              Simply apply for an invite through our website, and we'll review
+              your profile to see if we align with your brand vision.
             </p>
           </div>
         </div>
-        <div class="faq-container" id="faq1">
-          <div class="faq-question" id="faq1Question">
-            <h5 class="faq-question">What question do you have</h5>
+        <div class="faq-container" id="faq2">
+          <div class="faq-question" id="faq2Question">
+            <h5 class="faq-question">
+              How many creators do you work with at a time?
+            </h5>
             <i class="fa-solid fa-circle-plus faq-icon"></i>
           </div>
-          <div class="faq-answer" id="faq1Answer">
+          <div class="faq-answer" id="faq2Answer">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-              odio repellendus dolor quia quos esse officiis magnam ad eligendi
-              iste possimus odit reprehenderit culpa harum, quibusdam libero
-              provident distinctio? Dicta.
+              We only work with a limited number of creators—no more than 10 at
+              a time—ensuring a personalized, high-quality experience for each.
             </p>
           </div>
         </div>
-        <div class="faq-container" id="faq1">
-          <div class="faq-question" id="faq1Question">
-            <h5 class="faq-question">What question do you have</h5>
+        <div class="faq-container" id="faq3">
+          <div class="faq-question" id="faq3Question">
+            <h5 class="faq-question">What's the process once I'm accepted?</h5>
             <i class="fa-solid fa-circle-plus faq-icon"></i>
           </div>
-          <div class="faq-answer" id="faq1Answer">
+          <div class="faq-answer" id="faq3Answer">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-              odio repellendus dolor quia quos esse officiis magnam ad eligendi
-              iste possimus odit reprehenderit culpa harum, quibusdam libero
-              provident distinctio? Dicta.
+              Once accepted, we'll schedule an exclusive strategy session to
+              plan your merch, followed by design, production, and
+              launch—handled entirely by us.
+            </p>
+          </div>
+        </div>
+        <div class="faq-container" id="faq4">
+          <div class="faq-question" id="faq4Question">
+            <h5 class="faq-question">
+              Can I have complete creative control over my merch?
+            </h5>
+            <i class="fa-solid fa-circle-plus faq-icon"></i>
+          </div>
+          <div class="faq-answer" id="faq4Answer">
+            <p>
+              Absolutely. We collaborate with you to ensure your merch is 100%
+              aligned with your vision, but we handle all the technical details.
+            </p>
+          </div>
+        </div>
+        <div class="faq-container" id="faq5">
+          <div class="faq-question" id="faq5Question">
+            <h5 class="faq-question">
+              How long does it take to launch my merch?
+            </h5>
+            <i class="fa-solid fa-circle-plus faq-icon"></i>
+          </div>
+          <div class="faq-answer" id="faq5Answer">
+            <p>
+              The timeline varies, but from strategy session to launch, we aim
+              to have your merch ready within a few weeks, depending on design
+              and production specifics.
             </p>
           </div>
         </div>
@@ -229,7 +377,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="fade-in">
+    <footer>
       <div class="socials">
         <a href="#" target="_blank"
           ><i class="fa-brands fa-x-twitter icon"></i
