@@ -3,14 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Influvise</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaquires.css" />
+    <title>Influvise - Exclusive Merchandise for Influencers</title>
+    <meta
+      name="description"
+      content="Influvise is an invite-only service helping influencers launch premium merchandise effortlessly. Apply for exclusive access today."
+    />
+    <meta
+      name="keywords"
+      content="influencer merchandise, creator brand, custom merch, exclusive creator store"
+    />
+    <meta name="author" content="Influvise" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/metadata/favicon.ico" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/metadata/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/metadata/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/metadata/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/metadata/site.webmanifest" />
+
+    <!-- Open Graph (for social sharing) -->
+    <meta
+      property="og:title"
+      content="Influvise - Exclusive Merchandise for Influencers"
+    />
+    <meta
+      property="og:description"
+      content="Launch your own premium merchandise with Influvise - an invite-only service for top creators."
+    />
+    <meta property="og:image" content="./assets/metadata/og-image.jpg" />
+    <meta property="og:url" content="https://www.influvise.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Influvise - Exclusive Merchandise for Influencers"
+    />
+    <meta
+      name="twitter:description"
+      content="An invite-only service helping creators build premium merchandise brands. Apply for access."
+    />
+    <meta name="twitter:image" content="./assets/metadata/twitter-image.jpg" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.influvise.com" />
+
+    <!-- Robots Meta (for SEO indexing) -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/mediaquires.css" />
+
+    <!-- FontAwesome CDN -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:700|Inter:400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Structured Data for SEO (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Influvise",
+        "url": "https://www.influvise.com",
+        "logo": "./assets/metadata/logo.png",
+        "description": "Influvise is an invite-only platform for influencers to launch premium merchandise with ease.",
+        "sameAs": [
+          "https://twitter.com/influvise",
+          "https://www.influvise.com/blog"
+        ]
+      }
+    </script>
   </head>
+
   <body>
     <!-- HEADER -->
     <header>
@@ -20,13 +110,20 @@
           <a href="#About" class="nav-item accent-link">About</a>
         </li>
         <li>
-          <a href="#Blog" class="nav-item accent-link">Blog</a>
+          <a
+            href="https://influvise.substack.com"
+            target="_blank"
+            class="nav-item accent-link"
+            >Blog</a
+          >
         </li>
         <li>
           <a href="#FAQs" class="nav-item accent-link">FAQ's</a>
         </li>
         <li>
-          <a href="#Contact" class="nav-item accent-link">Contact</a>
+          <a href="mailto:support@influvisse.com" class="nav-item accent-link"
+            >Contact</a
+          >
         </li>
       </ul>
       <div class="mobile-nav">
@@ -37,13 +134,20 @@
               <a href="#About" class="mobile-nav-item">About</a>
             </li>
             <li>
-              <a href="#Blog" class="mobile-nav-item">Blog</a>
+              <a
+                href="https://influvise.substack.com"
+                target="_blank"
+                class="mobile-nav-item"
+                >Blog</a
+              >
             </li>
             <li>
               <a href="#FAQs" class="mobile-nav-item">FAQ's</a>
             </li>
             <li>
-              <a href="#Contact" class="mobile-nav-item">Contact</a>
+              <a href="mailto:support@influvisse.com" class="mobile-nav-item"
+                >Contact</a
+              >
             </li>
           </ul>
         </div>
@@ -56,10 +160,10 @@
         <h2>We Build Premium Merch Brands for Creators</h2>
         <p>
           From design to fulfillment, we manage it all while you create. No
-          inventory, no logistics — just premium merch tailored to your brand.
+          inventory, no logistics - just premium merch tailored to your brand.
         </p>
         <div>
-          <a href="#"
+          <a href="./apply.html" target="_blank"
             ><button class="primary-btn btn">Apply for Access</button></a
           >
           <a href="./index.html#About"
@@ -78,7 +182,7 @@
               </svg></button
           ></a>
         </div>
-        <img src="./assets/metadata/logo-icon.svg" alt="Logo Icon" />
+        <img src="./assets/hero/logo-icon.svg" alt="Logo Icon" />
       </div>
 
       <div class="partners">
@@ -148,7 +252,7 @@
                 over quantity, and less than 1% of applicants qualify. Apply now
                 to see if you qualify.
               </p>
-              <a href="./apply.html"
+              <a href="./apply.html" target="_blank"
                 ><button class="primary-btn btn">
                   Apply Here - Limited Access
                 </button></a
@@ -201,7 +305,7 @@
                 <strong>monthly strategy calls</strong> to track progress and
                 make adjustments.
               </p>
-              <a href="./apply.html"
+              <a href="./apply.html" target="_blank"
                 ><button class="primary-btn btn">
                   Get Started - Limited Access
                 </button></a
@@ -269,7 +373,7 @@
                   </li>
                 </ul>
               </div>
-              <a href="./apply.html"
+              <a href="./apply.html" target="_blank"
                 ><button class="primary-btn btn">
                   Begin Your Exclusive Journey
                 </button></a
@@ -313,7 +417,7 @@
                 This approach allows us to provide
                 <strong>top-tier service</strong> without compromise.
               </p>
-              <a href="./apply.html"
+              <a href="./apply.html" target="_blank"
                 ><button class="primary-btn btn">
                   Secure Your Exclusive Invite
                 </button></a

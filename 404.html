@@ -3,14 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Opps - You Lost?</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>404 - Page Not Found | Influvise</title>
+    <meta
+      name="description"
+      content="Oops! The page you're looking for doesn't exist. Return to Influvise and explore our exclusive creator merchandise."
+    />
+    <meta name="robots" content="noindex, follow" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/metadata/favicon.ico" type="image/x-icon" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/metadata/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/metadata/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/metadata/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/metadata/site.webmanifest" />
+
+    <!-- Open Graph (Social Preview) -->
+    <meta property="og:title" content="404 - Page Not Found | Influvise" />
+    <meta
+      property="og:description"
+      content="Oops! The page you're looking for doesn't exist. Return to Influvise and explore our exclusive creator merchandise."
+    />
+    <meta property="og:image" content="./assets/metadata/og-image.jpg" />
+    <meta property="og:url" content="https://www.influvise.com/404" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="404 - Page Not Found | Influvise" />
+    <meta
+      name="twitter:description"
+      content="Oops! The page you're looking for doesn't exist. Return to Influvise and explore our exclusive creator merchandise."
+    />
+    <meta name="twitter:image" content="./assets/metadata/twitter-image.jpg" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.influvise.com/404" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="mediaquires.css" />
+
+    <!-- FontAwesome CDN -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:700|Inter:400&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
     <!-- HEADER -->
     <header>
@@ -20,13 +81,18 @@
           <a href="./index.html#About" class="nav-item accent-link">About</a>
         </li>
         <li>
-          <a href="./index.html#Blog" class="nav-item accent-link">Blog</a>
+          <a
+            href="https://influvise.substack.com"
+            target="_blank"
+            class="nav-item accent-link"
+            >Blog</a
+          >
         </li>
         <li>
           <a href="./index.html#FAQs" class="nav-item accent-link">FAQ's</a>
         </li>
         <li>
-          <a href="./index.html#Contact" class="nav-item accent-link"
+          <a href="mailto://support@influvise.com" class="nav-item accent-link"
             >Contact</a
           >
         </li>
@@ -39,13 +105,20 @@
               <a href="./index.html#About" class="mobile-nav-item">About</a>
             </li>
             <li>
-              <a href="./index.html#Blog" class="mobile-nav-item">Blog</a>
+              <a
+                href="https://influvise.substack.com"
+                target="_blank"
+                class="mobile-nav-item"
+                >Blog</a
+              >
             </li>
             <li>
               <a href="./index.html#FAQs" class="mobile-nav-item">FAQ's</a>
             </li>
             <li>
-              <a href="./index.html#Contact" class="mobile-nav-item">Contact</a>
+              <a href="mailto://support@influvise.com" class="mobile-nav-item"
+                >Contact</a
+              >
             </li>
           </ul>
         </div>
@@ -55,22 +128,25 @@
     <main>
       <div class="section" id="notFound">
         <h5>404</h5>
-        <p>Looks like there is no page</p>
-        <a href="./index.html#Hero"
-          ><button class="primary-btn btn">Go Back Home</button></a
+        <p class="section__text small__headline">
+          Well, this is awkward... looks like this page packed its bags and
+          left.
+        </p>
+        <a href="./index.html#Hero" target="_blank"
+          ><button class="primary-btn btn">Take me home</button></a
         >
       </div>
     </main>
 
     <footer>
       <div class="socials">
-        <a href="#" target="_blank"
+        <a href="https://twitter.com/influvise" target="_blank"
           ><i class="fa-brands fa-x-twitter icon"></i
         ></a>
-        <a href="#" target="_blank"
+        <a href="https://linkedin.com/" target="_blank"
           ><i class="fa-brands fa-linkedin-in icon"></i
         ></a>
-        <a href="#" target="_blank"
+        <a href="mailto://support@influvise.com" target="_blank"
           ><i class="fa-regular fa-envelope icon"></i
         ></a>
       </div>
