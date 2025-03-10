@@ -505,7 +505,8 @@ footer small {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
-  width: 110%;
+  width: 130%;
+  height: auto;
   object-fit: cover;
 
   mask-image: linear-gradient(
@@ -867,3 +868,5 @@ footer small {
 .faq-icon.activate:hover {
   opacity: 1;
 }
+
+/* FORM APPLICATION */

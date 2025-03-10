@@ -87,8 +87,13 @@
   }
 
   .about-container {
-    min-width: 85vw;
-    max-width: 85vw;
+    max-width: calc(1200px / 4.2);
+    min-width: calc(1200px / 4.2);
+  }
+
+  .about-container img {
+    height: 130%;
+    width: auto;
   }
 
   .mobile-nav {
@@ -97,6 +102,10 @@
 
   .nav-links {
     display: none;
+  }
+
+  #Hero img {
+    right: -200px;
   }
 }
 
