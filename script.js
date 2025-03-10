@@ -101,3 +101,5 @@ document.querySelector('.mobile-nav-links').addEventListener('click', () => {
         menu.classList.remove('fa-xmark');
     }
 })
+
+

@@ -59,8 +59,7 @@ small {
   --secondary: #737373;
   --accent: #472c74;
 
-  --box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  --box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 * {
@@ -204,6 +203,7 @@ header {
 }
 
 .logo {
+  color: var(--text);
   display: flex;
   justify-content: left;
   align-items: center;
@@ -239,6 +239,7 @@ header {
 }
 
 .mobile-menu {
+  color: var(--text);
   position: relative;
   z-index: 5;
   cursor: pointer;
@@ -393,6 +394,7 @@ footer small {
 /* SCROLL */
 
 .partners {
+  /* cursor: none; */
   height: 100px;
   width: 90%;
   max-width: 1200px;
@@ -499,11 +501,12 @@ footer small {
 
 .about-container__img {
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: -1;
-  width: 100%;
-  height: auto;
+  width: 110%;
+  object-fit: cover;
 
   mask-image: linear-gradient(
     to bottom,
@@ -635,6 +638,7 @@ footer small {
   border-radius: 20px;
   filter: grayscale(1);
   margin: 20px auto;
+  box-shadow: var(--box-shadow);
 }
 
 .section__text {
@@ -677,12 +681,17 @@ footer small {
   transition: all 0.3s ease-in-out;
 }
 
+.small__headline {
+  text-align: center;
+}
+
 #howList {
-  list-style: decimal;
+  list-style: none;
 }
 
 #howList li {
-  margin: 10px auto;
+  margin: 20px auto;
+  font-weight: normal;
 }
 
 /* POPUP SECTION */
