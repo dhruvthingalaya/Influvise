@@ -322,6 +322,15 @@ footer small {
   text-align: center;
 }
 
+.policies {
+  margin: 20px auto;
+  opacity: 0.6;
+}
+
+.policies a {
+  text-decoration: none;
+}
+
 /* 404 */
 #notFound {
   display: flex;
@@ -870,3 +879,80 @@ footer small {
 }
 
 /* FORM APPLICATION */
+#applyForm {
+  /* background-color: var(--accent); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+}
+
+.application-form {
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  width: 90%;
+  max-width: 600px;
+  padding: 50px;
+  margin: 80px auto;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  user-select: none;
+  box-shadow: var(--box-shadow);
+}
+
+.application-form p {
+  margin-bottom: 30px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.input-container label {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  /* font-weight: 600; */
+  color: var(--accent);
+  /* opacity: 0.5; */
+  user-select: none;
+}
+
+.input-container textarea {
+  overflow: hidden; /* Hides scrollbar */
+  resize: none; /* Prevents manual resizing */
+}
+
+.input-field {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  height: fit-content;
+  margin-bottom: 20px;
+  font-size: 16px;
+  padding: 10px 5px;
+  font-family: "Inter", sans-serif;
+  color: var(--accent);
+  outline: none;
+  border: none;
+  user-select: text;
+  border-bottom: 1px solid var(--secondary);
+  transition: all 0.3s ease-in-out;
+}
+
+.input-field::placeholder {
+  opacity: 0.5;
+}
+
+.input-field:focus-within {
+  padding: 10px;
+  border-bottom: 2px solid var(--accent);
+  transition: all 0.3s ease-in-out;
+}

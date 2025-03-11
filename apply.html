@@ -140,7 +140,93 @@
 
     <!-- MAIN -->
     <main>
-      <div class="section" id="applyForm"></div>
+      <div class="section" id="applyForm">
+        <form
+          class="application-form"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+          <h4>Apply Here</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nisi
+            excepturi nam nulla ut dolorum at. Harum ab fuga dolor earum et
+            magnam, obcaecati sint qui, perferendis placeat dignissimos officia.
+          </p>
+          <!-- REQUIRED: Your Access key here. Don't worry this can be public -->
+          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+
+          <!-- Optional: Subject an be prefilled using type="hidden"
+               or type="text" for normal user submitted input -->
+          <input
+            type="hidden"
+            name="subject"
+            value="New Appllication for Influvise"
+          />
+
+          <!-- Optional: From Name you want to see in the email
+               Default is "Notifications". you can overwrite here -->
+          <input type="hidden" name="from_name" value="Influvise" />
+
+          <!-- Optional: Custom Redirection or Thank you Page
+               Make sure you add full URL including https:// -->
+          <input type="hidden" name="redirect" value="./index.html" />
+
+          <!-- Optional: But Recommended: To Prevent SPAM Submission.
+               Make sure its hidden by default -->
+          <input
+            type="checkbox"
+            name="botcheck"
+            class="hidden"
+            style="display: none"
+          />
+
+          <!-- Custom Form Data: Form data you wish to receive in email. -->
+          <div class="input-container">
+            <label for="Email">Email</label>
+            <input
+              class="input-field"
+              type="email"
+              name="Email"
+              placeholder="email@example.com"
+              required
+            />
+          </div>
+          <div class="input-container">
+            <label for="Name">Full Name</label>
+            <input
+              class="input-field"
+              type="text"
+              name="Name"
+              placeholder="Olajide Olayinka Williams"
+              required
+            />
+          </div>
+          <!-- <input type="text" name="Phone Number" required /> -->
+          <div class="input-container">
+            <label for="Message">Message</label>
+            <textarea
+              rows="1"
+              oninput="adjustHeight(this)"
+              class="input-field"
+              name="Message"
+              placeholder="Type your message..."
+              required
+            ></textarea>
+          </div>
+
+          <!-- hCaptcha: Recommended for Advanced Spam Protection. -->
+          <!-- <div class="h-captcha" data-captcha="true"></div> -->
+
+          <button class="primary-btn btn" type="submit">Submit Form</button>
+        </form>
+
+        <!-- Required only if you are using hCaptcha or Advanced File Upload. -->
+        <script
+          src="https://web3forms.com/client/script.js"
+          async
+          defer
+        ></script>
+      </div>
     </main>
 
     <!-- FOOTER -->
@@ -157,12 +243,14 @@
         ></a>
       </div>
       <small>© Influvise 2025</small>
-      <small
-        >Designed by
-        <a href="https://linktr.ee/dhruvthingalaya" target="_blank"
-          >@dhruvthingalaya</a
-        ></small
-      >
+      <small class="policies"
+        ><a class="accent-link" target="_blank" href="#">Privacy Policy</a> .
+        <a class="accent-link" target="_blank" href="#">Terms and Conditions</a>
+        .
+        <a class="accent-link" target="_blank" href="#"
+          >Application Guidelines</a
+        >
+      </small>
     </footer>
 
     <script src="script.js"></script>

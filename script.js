@@ -102,4 +102,7 @@ document.querySelector('.mobile-nav-links').addEventListener('click', () => {
     }
 })
 
-
+function adjustHeight(element) {
+    element.style.height = "auto"; // Reset height to recalculate
+    element.style.height = element.scrollHeight + "px"; // Adjust height
+}
