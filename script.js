@@ -106,3 +106,97 @@ function adjustHeight(element) {
     element.style.height = "auto"; // Reset height to recalculate
     element.style.height = element.scrollHeight + "px"; // Adjust height
 }
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".application-form");
+    const dropdowns = document.querySelectorAll(".custom-dropdown");
+    const inputs = form.querySelectorAll("input[required]");
+
+    // Disable default browser validation
+    form.setAttribute("novalidate", true);
+
+    // Email validation regex
+    function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    // Dropdown handling
+    dropdowns.forEach(dropdown => {
+        const btn = dropdown.querySelector(".dropdown-btn");
+        const options = dropdown.querySelectorAll(".option");
+        const hiddenInputId = dropdown.getAttribute("data-input");
+        const hiddenInput = document.getElementById(hiddenInputId);
+        const errorMessage = document.getElementById(hiddenInput.name);
+
+        // Toggle dropdown open/close
+        btn.addEventListener("click", function (event) {
+            event.stopPropagation();
+            dropdowns.forEach(d => d.classList.remove("active"));
+            dropdown.classList.toggle("active");
+        });
+
+        // Select an option & update input value
+        options.forEach(option => {
+            option.addEventListener("click", function () {
+                btn.innerHTML = this.textContent + ' <i class="fa-solid fa-angle-down"></i>';
+                hiddenInput.value = this.getAttribute("data-value");
+                hiddenInput.setAttribute("value", this.getAttribute("data-value"));
+                errorMessage?.classList.remove("visible");
+                dropdown.classList.remove("active");
+            });
+        });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", function () {
+        dropdowns.forEach(dropdown => dropdown.classList.remove("active"));
+    });
+
+    // Form validation before submitting
+    form.addEventListener("submit", function (event) {
+        let isValid = true;
+
+        inputs.forEach(input => {
+            const errorMessage = document.getElementById(input.name);
+
+            if (!input.value.trim()) {
+                isValid = false;
+                errorMessage?.classList.add("visible");
+            } else if (input.type === "email" && !isValidEmail(input.value)) {
+                isValid = false;
+                errorMessage?.classList.add("visible"); // Show email error if invalid format
+            } else {
+                errorMessage?.classList.remove("visible");
+            }
+        });
+
+        if (!isValid) {
+            event.preventDefault();
+        }
+    });
+
+    // Hide error message when user starts typing
+    inputs.forEach(input => {
+        input.addEventListener("input", function () {
+            const errorMessage = document.getElementById(input.name);
+            if (input.type === "email") {
+                if (isValidEmail(input.value)) {
+                    errorMessage?.classList.remove("visible");
+                }
+            } else {
+                if (input.value.trim()) {
+                    errorMessage?.classList.remove("visible");
+                }
+            }
+        });
+    });
+});
+
+
+
+

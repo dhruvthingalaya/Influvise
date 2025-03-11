@@ -192,6 +192,16 @@ a {
   overflow: hidden;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 /* HEADER */
 header {
   display: flex;
@@ -955,4 +965,77 @@ footer small {
   padding: 10px;
   border-bottom: 2px solid var(--accent);
   transition: all 0.3s ease-in-out;
+}
+
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  color: var(--accent);
+  font-family: "Inter", sans-serif;
+  padding: 10px 20px;
+  margin: 10px auto;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid var(--secondary);
+  width: 100%;
+}
+
+.dropdown-options {
+  display: none;
+  position: absolute;
+  z-index: 9;
+  background-color: var(--background);
+  font-family: "Inter", sans-serif;
+  color: var(--accent);
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.option {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #ddd;
+}
+
+/* Show options when button is clicked */
+.custom-dropdown:hover .dropdown-options {
+  display: block;
+}
+
+.error-message {
+  overflow: hidden;
+  height: 0px;
+  width: 100%;
+  padding: 0px 10px;
+  border: 1px solid red;
+  border-radius: 5px;
+  background-color: rgba(255, 0, 0, 0.3);
+  text-align: left;
+  color: red;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  opacity: 0;
+  display: none;
+  transition: all 0.3s ease-in-out allow-discrete;
+}
+.error-message.visible {
+  opacity: 1;
+  padding: 10px 10px;
+  height: fit-content;
+  display: block;
+  transition: all 0.3s ease-in-out allow-discrete;
 }

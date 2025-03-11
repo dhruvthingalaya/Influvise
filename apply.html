@@ -153,7 +153,11 @@
             magnam, obcaecati sint qui, perferendis placeat dignissimos officia.
           </p>
           <!-- REQUIRED: Your Access key here. Don't worry this can be public -->
-          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+          <input
+            type="hidden"
+            name="access_key"
+            value="c9e452a2-2c96-4454-92a8-464d961b2601"
+          />
 
           <!-- Optional: Subject an be prefilled using type="hidden"
                or type="text" for normal user submitted input -->
@@ -169,7 +173,7 @@
 
           <!-- Optional: Custom Redirection or Thank you Page
                Make sure you add full URL including https:// -->
-          <input type="hidden" name="redirect" value="./index.html" />
+          <input type="hidden" name="redirect" value="https://google.com" />
 
           <!-- Optional: But Recommended: To Prevent SPAM Submission.
                Make sure its hidden by default -->
@@ -181,28 +185,87 @@
           />
 
           <!-- Custom Form Data: Form data you wish to receive in email. -->
+
+          <!-- FULL NAME -->
           <div class="input-container">
-            <label for="Email">Email</label>
-            <input
-              class="input-field"
-              type="email"
-              name="Email"
-              placeholder="email@example.com"
-              required
-            />
-          </div>
-          <div class="input-container">
-            <label for="Name">Full Name</label>
+            <label for="full_name">Full Name</label>
             <input
               class="input-field"
               type="text"
-              name="Name"
-              placeholder="Olajide Olayinka Williams"
+              name="full_name"
+              placeholder="Jhon Doe"
               required
             />
+            <p class="error-message" id="full_name">This field is required.</p>
           </div>
-          <!-- <input type="text" name="Phone Number" required /> -->
+          <!-- EMAIL ID -->
           <div class="input-container">
+            <label for="email">Email</label>
+            <input
+              class="input-field"
+              type="email"
+              name="email"
+              placeholder="john@example.com"
+              required
+            />
+            <p class="error-message" id="email">Please enter a valid email.</p>
+          </div>
+          <!-- SOCIAL MEDIA HANDLE -->
+          <div class="input-container">
+            <label for="social_media">Social Media Handle </label>
+            <input
+              class="input-field"
+              type="text"
+              name="social_media"
+              placeholder="@johndoe (YouTube, Instagram, etc.)"
+              required
+            />
+            <p class="error-message" id="social_media">
+              This field is required.
+            </p>
+          </div>
+          <!-- PRIMARY PLATFORM -->
+          <div class="input-container">
+            <label for="Primary Platform">Primary Platform</label>
+            <div class="custom-dropdown" data-input="primaryPlatform">
+              <button class="dropdown-btn" type="button">
+                Select an option <i class="fa-solid fa-angle-down"></i>
+              </button>
+              <div class="dropdown-options">
+                <div class="option" data-value="Youtube">Youtube</div>
+                <div class="option" data-value="Twitch">Twitch</div>
+                <div class="option" data-value="Instagram">Instagram</div>
+                <div class="option" data-value="Tiktok">Tiktok</div>
+                <div class="option" data-value="Others">Others</div>
+              </div>
+            </div>
+            <input
+              type="hidden"
+              name="primary_platform"
+              id="primaryPlatform"
+              required
+            />
+            <p class="error-message" id="primary_platform">
+              Please select a platform.
+            </p>
+          </div>
+          <!-- FOLLOWERS/SUBSCRIBERS COUNT -->
+          <div class="input-container">
+            <label for="followers">Follower/Subscriber Count</label>
+            <input
+              class="input-field"
+              type="number"
+              name="followers_count"
+              placeholder="50000"
+              required
+            />
+            <p class="error-message" id="followers_count">
+              This field is required.
+            </p>
+          </div>
+
+          <!-- <input type="text" name="Phone Number" required /> -->
+          <!-- <div class="input-container">
             <label for="Message">Message</label>
             <textarea
               rows="1"
@@ -212,7 +275,7 @@
               placeholder="Type your message..."
               required
             ></textarea>
-          </div>
+          </div> -->
 
           <!-- hCaptcha: Recommended for Advanced Spam Protection. -->
           <!-- <div class="h-captcha" data-captcha="true"></div> -->
