@@ -107,6 +107,15 @@
   #Hero img {
     right: -200px;
   }
+
+  .application-form {
+    width: 100%;
+    padding: 40px;
+  }
+
+  .multiple_choice-container {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /* Very Small Devices (max-width: 480px) */

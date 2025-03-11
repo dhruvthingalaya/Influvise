@@ -146,11 +146,13 @@
           action="https://api.web3forms.com/submit"
           method="POST"
         >
-          <h4>Apply Here</h4>
+          <h4>Exclusive Creator Application</h4>
+          <br />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nisi
-            excepturi nam nulla ut dolorum at. Harum ab fuga dolor earum et
-            magnam, obcaecati sint qui, perferendis placeat dignissimos officia.
+            Influvise is a private, invite-only platform for elite creators
+            looking to build a premium merchandise brand. Only a select few will
+            be accepted. If chosen, you'll receive an official email from
+            @influvise.com - ensure you check your inbox carefully.
           </p>
           <!-- REQUIRED: Your Access key here. Don't worry this can be public -->
           <input
@@ -173,7 +175,11 @@
 
           <!-- Optional: Custom Redirection or Thank you Page
                Make sure you add full URL including https:// -->
-          <input type="hidden" name="redirect" value="https://google.com" />
+          <input
+            type="hidden"
+            name="redirect"
+            value="https://influvise.com/thank-you"
+          />
 
           <!-- Optional: But Recommended: To Prevent SPAM Submission.
                Make sure its hidden by default -->
@@ -188,7 +194,9 @@
 
           <!-- FULL NAME -->
           <div class="input-container">
-            <label for="full_name">Full Name</label>
+            <label for="full_name"
+              >Full Name<span style="color: red">*</span></label
+            >
             <input
               class="input-field"
               type="text"
@@ -198,9 +206,10 @@
             />
             <p class="error-message" id="full_name">This field is required.</p>
           </div>
+
           <!-- EMAIL ID -->
           <div class="input-container">
-            <label for="email">Email</label>
+            <label for="email">Email<span style="color: red">*</span></label>
             <input
               class="input-field"
               type="email"
@@ -210,9 +219,12 @@
             />
             <p class="error-message" id="email">Please enter a valid email.</p>
           </div>
+
           <!-- SOCIAL MEDIA HANDLE -->
           <div class="input-container">
-            <label for="social_media">Social Media Handle </label>
+            <label for="social_media"
+              >Social Media Handle<span style="color: red">*</span></label
+            >
             <input
               class="input-field"
               type="text"
@@ -224,9 +236,12 @@
               This field is required.
             </p>
           </div>
+
           <!-- PRIMARY PLATFORM -->
           <div class="input-container">
-            <label for="Primary Platform">Primary Platform</label>
+            <label for="Primary Platform"
+              >Primary Platform<span style="color: red">*</span></label
+            >
             <div class="custom-dropdown" data-input="primaryPlatform">
               <button class="dropdown-btn" type="button">
                 Select an option <i class="fa-solid fa-angle-down"></i>
@@ -249,9 +264,12 @@
               Please select a platform.
             </p>
           </div>
+
           <!-- FOLLOWERS/SUBSCRIBERS COUNT -->
           <div class="input-container">
-            <label for="followers">Follower/Subscriber Count</label>
+            <label for="followers_count"
+              >Follower/Subscriber Count<span style="color: red">*</span></label
+            >
             <input
               class="input-field"
               type="number"
@@ -264,18 +282,256 @@
             </p>
           </div>
 
-          <!-- <input type="text" name="Phone Number" required /> -->
-          <!-- <div class="input-container">
-            <label for="Message">Message</label>
+          <!-- CONTENT TYPE -->
+          <div class="input-container">
+            <label for="content_type"
+              >What type of content do you create?<span style="color: red"
+                >*</span
+              ></label
+            >
+            <div class="multiple_choice-container" data-input="contentType">
+              <label class="multiple_choice">
+                <input
+                  type="radio"
+                  name="content_type"
+                  value="Gaming"
+                  required
+                />Gaming
+              </label>
+              <label class="multiple_choice">
+                <input
+                  type="radio"
+                  name="content_type"
+                  value="Tech"
+                  required
+                />Tech
+              </label>
+              <label class="multiple_choice">
+                <input
+                  type="radio"
+                  name="content_type"
+                  value="Fashion"
+                  required
+                />Fashion
+              </label>
+              <label class="multiple_choice">
+                <input
+                  type="radio"
+                  name="content_type"
+                  value="Fitness"
+                  required
+                />Fitness
+              </label>
+              <label class="multiple_choice">
+                <input
+                  type="radio"
+                  name="content_type"
+                  value="Education"
+                  required
+                />Education
+              </label>
+              <label class="multiple_choice">
+                <input
+                  type="radio"
+                  name="content_type"
+                  value="Vlogs"
+                  required
+                />Vlogs
+              </label>
+              <label class="multiple_choice">
+                <input
+                  type="radio"
+                  name="content_type"
+                  value="Other"
+                  required
+                />Other
+              </label>
+            </div>
+            <input
+              type="hidden"
+              name="content_type"
+              id="contentType"
+              required
+            />
+            <p class="error-message" id="content_type">
+              This field is required.
+            </p>
+          </div>
+
+          <!-- AUDIENCE -->
+          <div class="input-container">
+            <label for="audience"
+              >Who is your audience?<span style="color: red">*</span></label
+            >
+            <input
+              class="input-field"
+              type="text"
+              name="audience"
+              placeholder="Age, Interests, etc."
+              required
+            />
+            <p class="error-message" id="audience">This field is required.</p>
+          </div>
+
+          <!-- LAUNCHED MERCH BEFORE -->
+          <div class="input-container">
+            <label for="launched_before"
+              >Have you launched merch before?<span style="color: red"
+                >*</span
+              ></label
+            >
+            <div class="multiple_choice-container" data-input="launchedBefore">
+              <label class="multiple_choice">
+                <input
+                  type="radio"
+                  name="launched_before"
+                  value="Yes"
+                  required
+                />Yes
+              </label>
+              <label class="multiple_choice">
+                <input
+                  type="radio"
+                  name="launched_before"
+                  value="No"
+                  required
+                />No
+              </label>
+            </div>
+            <input
+              type="hidden"
+              name="launched_before"
+              id="launchedBefore"
+              required
+            />
+            <p class="error-message" id="launched_before">
+              This field is required.
+            </p>
+          </div>
+
+          <!-- IF YESS -->
+          <div class="input-container">
+            <label for="if_yes"
+              ><strong>If Yes: </strong>“Tell us about your experience.”</label
+            >
+            <input
+              class="input-field"
+              type="text"
+              name="if_yes"
+              placeholder="Launched a hoodie line in 2023, sold 500 units, struggled with fulfillment."
+            />
+          </div>
+
+          <!-- WHY INFLUVISE -->
+          <div class="input-container">
+            <label for="why_influvise"
+              >Why do you want to launch a merch brand with Influvise?<span
+                style="color: red"
+                >*</span
+              ></label
+            >
             <textarea
-              rows="1"
+              rows="4"
+              maxlength="500"
               oninput="adjustHeight(this)"
               class="input-field"
-              name="Message"
-              placeholder="Type your message..."
+              name="why_influvise"
+              placeholder="Looking for a hassle-free way to create high-quality merch that truly represents my brand."
               required
             ></textarea>
-          </div> -->
+            <p class="error-message" id="why_influvise">
+              This field is required.
+            </p>
+          </div>
+
+          <!-- STRATEGY SESSION -->
+          <div class="input-container">
+            <label for="strategy_session"
+              >Are you open to a strategy session if accepted?<span
+                style="color: red"
+                >*</span
+              ></label
+            >
+            <div class="multiple_choice-container" data-input="strategySession">
+              <label class="multiple_choice">
+                <input
+                  type="radio"
+                  name="strategy_session"
+                  value="Yes"
+                  required
+                />Yes
+              </label>
+              <label class="multiple_choice">
+                <input
+                  type="radio"
+                  name="strategy_session"
+                  value="No"
+                  required
+                />No
+              </label>
+            </div>
+            <input
+              type="hidden"
+              name="strategy_session"
+              id="strategySession"
+              required
+            />
+            <p class="error-message" id="strategy_session">
+              This field is required.
+            </p>
+          </div>
+
+          <!-- HOW DID YOU HEAR ABOUT US -->
+          <div class="input-container">
+            <label for="hear_about_us"
+              >How did you hear about us?<span style="color: red"
+                >*</span
+              ></label
+            >
+            <div class="multiple_choice-container" data-input="hearAboutus">
+              <label class="multiple_choice">
+                <input
+                  type="radio"
+                  name="hear_about_us"
+                  value="Social Media"
+                  required
+                />Social Media
+              </label>
+              <label class="multiple_choice">
+                <input
+                  type="radio"
+                  name="hear_about_us"
+                  value="Referral"
+                  required
+                />Referral
+              </label>
+              <label class="multiple_choice">
+                <input
+                  type="radio"
+                  name="hear_about_us"
+                  value="Search Engine"
+                  required
+                />Search Engine
+              </label>
+              <label class="multiple_choice">
+                <input
+                  type="radio"
+                  name="hear_about_us"
+                  value="Other"
+                  required
+                />Other
+              </label>
+            </div>
+            <input
+              type="hidden"
+              name="hear_about_us"
+              id="hearAboutus"
+              required
+            />
+            <p class="error-message" id="hear_about_us">
+              This field is required.
+            </p>
+          </div>
 
           <!-- hCaptcha: Recommended for Advanced Spam Protection. -->
           <!-- <div class="h-captcha" data-captcha="true"></div> -->
@@ -307,10 +563,21 @@
       </div>
       <small>© Influvise 2025</small>
       <small class="policies"
-        ><a class="accent-link" target="_blank" href="#">Privacy Policy</a> .
-        <a class="accent-link" target="_blank" href="#">Terms and Conditions</a>
+        ><a class="accent-link" target="_blank" href="./privacy-policy.html"
+          >Privacy Policy</a
+        >
         .
-        <a class="accent-link" target="_blank" href="#"
+        <a
+          class="accent-link"
+          target="_blank"
+          href="./terms-and-conditions.html"
+          >Terms and Conditions</a
+        >
+        .
+        <a
+          class="accent-link"
+          target="_blank"
+          href="./application-guidelines.html"
           >Application Guidelines</a
         >
       </small>

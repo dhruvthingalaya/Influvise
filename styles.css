@@ -369,6 +369,29 @@ footer small {
   /* gap: 2rem; */
 }
 
+.legal {
+  height: fit-content;
+  width: 90%;
+  max-width: 1000;
+  padding: 20px;
+  margin: 20px auto;
+  gap: 10px;
+}
+
+.legal h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.legal li {
+  margin: 10px auto;
+  width: 90%;
+}
+
 #Hero {
   overflow: hidden;
   display: flex;
@@ -928,15 +951,17 @@ footer small {
 .input-container label {
   font-family: "Inter", sans-serif;
   font-size: 14px;
-  /* font-weight: 600; */
   color: var(--accent);
-  /* opacity: 0.5; */
   user-select: none;
 }
 
 .input-container textarea {
-  overflow: hidden; /* Hides scrollbar */
-  resize: none; /* Prevents manual resizing */
+  overflow: hidden;
+  resize: vertical;
+}
+
+.input-container textarea::-webkit-scrollbar {
+  display: none;
 }
 
 .input-field {
@@ -947,6 +972,7 @@ footer small {
   height: fit-content;
   margin-bottom: 20px;
   font-size: 16px;
+  text-overflow: ellipsis;
   padding: 10px 5px;
   font-family: "Inter", sans-serif;
   color: var(--accent);
@@ -958,6 +984,7 @@ footer small {
 }
 
 .input-field::placeholder {
+  text-overflow: ellipsis;
   opacity: 0.5;
 }
 
@@ -1014,6 +1041,33 @@ footer small {
 /* Show options when button is clicked */
 .custom-dropdown:hover .dropdown-options {
   display: block;
+}
+
+.multiple_choice-container {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: grid;
+  justify-items: start;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.multiple_choice {
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: var(--accent);
+  padding: 10px 5px;
+  width: fit-content;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.multiple_choice input {
+  margin-right: 5px;
+  accent-color: var(--accent);
 }
 
 .error-message {
