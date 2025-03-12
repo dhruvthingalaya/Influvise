@@ -13,6 +13,7 @@ h2,
 h3,
 h4,
 h5 {
+  user-select: text;
   color: var(--text);
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
@@ -48,6 +49,7 @@ h5 {
 }
 
 small {
+  user-select: text;
   font-size: 0.75rem; /* 12px */
   line-height: 1.8; /* ~22px */
 }
@@ -63,6 +65,7 @@ small {
 }
 
 * {
+  user-select: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -88,6 +91,10 @@ html {
 
 html::-webkit-scrollbar {
   display: none; /* For Chrome, Safari, and Edge */
+}
+
+p {
+  user-select: text;
 }
 
 /* LINKS */
@@ -1091,7 +1098,6 @@ footer small {
   transition: all 0.3s ease-in-out allow-discrete;
 }
 
-
 /* THANK YOU PAGE */
 #thankYou {
   width: 90vw;
@@ -1120,4 +1126,3 @@ footer small {
   text-align: justify;
   margin: 30px;
 }
-
