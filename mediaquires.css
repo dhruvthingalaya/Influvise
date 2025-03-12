@@ -91,7 +91,7 @@
     min-width: calc(1200px / 4.2);
   }
 
-  .about-container img {
+  .about-container__img {
     height: 130%;
     width: auto;
   }
@@ -115,6 +115,14 @@
 
   .multiple_choice-container {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .thank-you__heading {
+    font-size: 4rem;
+  }
+
+  .thank-you__para {
+    text-align: left;
   }
 }
 
