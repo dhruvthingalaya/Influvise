@@ -1137,7 +1137,7 @@ footer small {
 }
 
 .contact-form {
-  background-color: var(--background);
+  /* background-color: var(--background); */
   display: flex;
   flex-direction: column;
   justify-content: center;
