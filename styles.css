@@ -1127,7 +1127,6 @@ footer small {
   margin: 30px;
 }
 
-
 /* CONTACT FORM */
 #contactForm {
   display: flex;
@@ -1137,7 +1136,7 @@ footer small {
 }
 
 .contact-form {
-  /* background-color: var(--background); */
+  background-color: var(--background);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1153,6 +1152,11 @@ footer small {
   box-shadow: var(--box-shadow);
 }
 
+.contact-form h4 {
+  user-select: none;
+}
+
 .contact-form p {
+  user-select: none;
   margin-bottom: 30px;
 }
