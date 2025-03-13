@@ -924,7 +924,7 @@ footer small {
   height: fit-content;
 }
 
-.application-form {
+.form {
   background-color: var(--background);
   display: flex;
   flex-direction: column;
@@ -941,7 +941,7 @@ footer small {
   box-shadow: var(--box-shadow);
 }
 
-.application-form p {
+.form p {
   margin-bottom: 30px;
 }
 
@@ -1133,30 +1133,4 @@ footer small {
   justify-content: center;
   align-items: center;
   height: fit-content;
-}
-
-.contact-form {
-  background-color: var(--background);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: left;
-  width: 90%;
-  max-width: 600px;
-  padding: 50px;
-  margin: 80px auto;
-  border: none;
-  border-radius: 20px;
-  outline: none;
-  user-select: none;
-  box-shadow: var(--box-shadow);
-}
-
-.contact-form h4 {
-  user-select: none;
-}
-
-.contact-form p {
-  user-select: none;
-  margin-bottom: 30px;
 }
