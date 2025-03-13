@@ -924,7 +924,7 @@ footer small {
   height: fit-content;
 }
 
-.form {
+.user-forms {
   background-color: var(--background);
   display: flex;
   flex-direction: column;
@@ -941,7 +941,7 @@ footer small {
   box-shadow: var(--box-shadow);
 }
 
-.form p {
+.user-forms p {
   margin-bottom: 30px;
 }
 
