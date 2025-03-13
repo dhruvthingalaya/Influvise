@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // Application form validation
-    const form = document.querySelector(".form");
+    const form = document.querySelector(".user-forms");
     if (form) {
         form.setAttribute("novalidate", true);
         const inputs = form.querySelectorAll("input[required], textarea[required]");
