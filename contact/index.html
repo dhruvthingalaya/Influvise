@@ -182,17 +182,9 @@
                  Default is "Notifications". you can overwrite here -->
           <input type="hidden" name="from_name" value="Influvise - Contact" />
 
-          <!-- Optional: Default replyto will be "email" field (if available)
-                 you may overwrite replyto with different email here -->
-          <input type="hidden" name="replyto" value="customer@example.com" />
-
           <!-- Optional: Custom Redirection or Thank you Page
                  Make sure you add full URL including https:// -->
-          <input
-            type="hidden"
-            name="redirect"
-            value="https://influvise.com/"
-          />
+          <input type="hidden" name="redirect" value="https://influvise.com/" />
 
           <!-- Optional: But Recommended: To Prevent SPAM Submission.
                  Make sure its hidden by default -->
@@ -202,6 +194,7 @@
             class="hidden"
             style="display: none"
           />
+          <input type="text" name="honeypot" style="display: none" />
 
           <!-- Custom Form Data: Form data you wish to receive in email. -->
           <div class="input-container">
