@@ -226,7 +226,6 @@ header {
   display: flex;
   justify-content: left;
   align-items: center;
-  font-style: italic;
   user-select: none;
   transition: all 0.3s ease-in-out;
 }
@@ -980,6 +979,7 @@ footer small {
   padding: 10px 5px;
   font-family: "Inter", sans-serif;
   color: var(--accent);
+  background-color: transparent;
   outline: none;
   border: none;
   user-select: text;
